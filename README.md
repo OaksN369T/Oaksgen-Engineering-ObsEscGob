@@ -1,5 +1,7 @@
 # oaksgen-engineering-observabilidad
 
+Estructura del Repositorio (oaksgen-engineering-observabilidad)
+
 oaksgen-engineering-observabilidad/
 ├── README.md                              # Documentación principal + Runbooks operativos (RB-01 y RB-02)
 ├── monitorizacion_oaksgen.py              # Script maestro de observabilidad, KS-Test y simulación de incidentes
