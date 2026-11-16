@@ -1,4 +1,14 @@
 # oaksgen-engineering-observabilidad
+
+oaksgen-engineering-observabilidad/
+├── README.md                              # Documentación principal + Runbooks operativos (RB-01 y RB-02)
+├── monitorizacion_oaksgen.py              # Script maestro de observabilidad, KS-Test y simulación de incidentes
+├── requirements.txt                       # Dependencias exactas del entorno
+├── .gitignore                             # Para no subir archivos basura ni bases temporales pesadas
+└── assets/
+    └── dashboard_observabilidad_oaksgen.png  # Tu gráfica de 4 paneles para que se vea directo en el README
+
+
 Este es el archivo estrella que GitHub. Ya incluye las insignias de versión, la tabla de SLOs/Error Budgets, la incrustación automática de tu dashboard y los Runbooks RB-01 y RB-02 paso a paso.
 
 Archivo README.md (Con los Runbooks Operativos incluidos)
@@ -65,3 +75,26 @@ Sistema de monitorización proactiva, detección estadística de *Data Drift* y 
 1. **Instalar dependencias:**
    ```bash
    pip install -r requirements.txt
+
+   1. Ejecutar simulación de incidentes y monitoreo:
+   python monitorizacion_oaksgen.py
+
+   2. Visualizar trazas y experimentos en MLflow UI:
+   mlflow ui --backend-store-uri sqlite:///mlflow.db --port 5000
+
+   Autor: José Manuel Robles Espinosa — Oaks Motors Industries
+   ---
+
+### 2. Archivo `requirements.txt`
+Para que cualquier persona (o la profesora) pueda replicar el entorno exacto:
+
+```text
+numpy>=1.26.0
+pandas>=2.1.0
+scikit-learn>=1.4.0
+xgboost>=2.0.0
+scipy>=1.12.0
+matplotlib>=3.8.0
+mlflow>=3.18.0
+
+
