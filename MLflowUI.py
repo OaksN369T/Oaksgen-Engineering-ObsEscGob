@@ -1,5 +1,3 @@
-https://strategies-harris-brake-alphabetical.trycloudflare.com/
-
 Abriendo la Interfaz Web de MLflow para tomar nuestras capturas Una vez que corra el script de arriba y nos imprima los logs de ambos incidentes y sus runbooks .
 
 import subprocess, time, re, urllib.request
@@ -42,5 +40,6 @@ tunnel = subprocess.Popen(
 for line in tunnel.stdout:
     match = re.search(r"https://[a-zA-Z0-9-]+\.trycloudflare\.com", line)
     if match:
-        print(f"\n>>> ¡AHORA SÍ! Haz clic en este enlace para abrir MLflow UI:\n👉 {match.group(0)}\n")
+        print(f"\n>>> ¡AHORA SÍ! Haz clic en este enlace para abrir MLflow UI:\n👉 {match.group(0)}\n") 
         break
+https://strategies-harris-brake-alphabetical.trycloudflare.com/
