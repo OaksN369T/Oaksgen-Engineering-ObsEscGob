@@ -84,17 +84,3 @@ Sistema de monitorización proactiva, detección estadística de *Data Drift* y 
 
    Autor: José Manuel Robles Espinosa — Oaks Motors Industries
    ---
-
-### 2. Archivo `requirements.txt`
-Para que cualquier persona (o la profesora) pueda replicar el entorno exacto:
-
-```text
-numpy>=1.26.0
-pandas>=2.1.0
-scikit-learn>=1.4.0
-xgboost>=2.0.0
-scipy>=1.12.0
-matplotlib>=3.8.0
-mlflow>=3.18.0
-
-
