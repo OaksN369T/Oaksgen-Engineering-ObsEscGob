@@ -86,3 +86,27 @@ Sistema de monitorización proactiva, detección estadística de *Data Drift* y 
 
    Autor: José Manuel Robles Espinosa — Oaks Motors Industries
    ---
+## 📈 Fase III (Actividad 9): Rediseño Escalable, FinOps y Auditoría Fairness
+---
+
+## 📈 Fase III (Actividad 9): Rediseño Escalable (`v3.0`), FinOps y Auditoría *Responsible AI*
+
+Para soportar la expansión de **Oaks Motors Industries** a 4 líneas de ensamble manteniendo los SLAs ($\text{Recall} \ge 0.95$ y $\text{Latencia } p95 \le 50\text{ ms}$), se evolucionó de una arquitectura monolítica fija (`v2.1`) a una topología de microservicios elásticos (`v3.0`) con balanceo de carga, caché en memoria y gobernanza automatizada.
+
+### 🏗️ Arquitectura Actual (`v2.1`) vs. Propuesta (`v3.0`)
+
+![Diagrama Arquitectura Actual vs Propuesta](assets/arquitectura_actual_vs_propuesta.png)
+
+### 📊 Benchmark de Desempeño, FinOps y Auditoría *Fairness*
+
+![Dashboard Escalabilidad FinOps y Fairness](assets/dashboard_escalabilidad_fairness_oaksgen.png)
+
+* **Optimización FinOps:** Reducción del **40.4%** en costo mensual de infraestructura (de $\$318.00$ a $\$189.50\text{ USD/mes}$) mediante *scale-out* elástico y instancias *Spot* en picos.
+* **Auditoría de Sesgos (*Fairness*):** Corrección de la brecha térmica en el **Turno Nocturno** ($\Delta\text{Recall} \le 0.02$) incorporando `temp_ambiente` y calibración de umbral ($\tau = 0.32$).
+
+### ⚙️ Ejecución del Benchmark de Escalabilidad y Fairness
+
+```bash
+python escalabilidad_fairness_oaksgen.py
+
+
