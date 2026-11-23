@@ -75,7 +75,8 @@ Sistema de monitorización proactiva, detección estadística de *Data Drift* y 
 ## 🚀 Ejecución y Reproducibilidad
 
 1. **Instalar dependencias:**
-   ```bash
+
+   bash
    pip install -r requirements.txt
 
    1. Ejecutar simulación de incidentes y monitoreo:
@@ -85,7 +86,7 @@ Sistema de monitorización proactiva, detección estadística de *Data Drift* y 
    mlflow ui --backend-store-uri sqlite:///mlflow.db --port 5000
 
    Autor: José Manuel Robles Espinosa — Oaks Motors Industries
-   ---
+   
 
 ## 📈 Fase III (Actividad 9): Rediseño Escalable (`v3.0`), FinOps y Auditoría Fairness *Responsible AI*
 
@@ -107,9 +108,7 @@ Para soportar la expansión de **Oaks Motors Industries** a 4 líneas de ensambl
 bash
 python escalabilidad_fairness_oaksgen.py
 
----
-
-### Corrigiendo datos desviados.
+### Hubo errores a la hora de establecer la Escalabilidad y ciertos valores no coincidían por lo tanto Corrigiendo esos datos desviados obtenemos estos nuevos Resultados.
 
 ![Dashboard Escalabilidad FinOps y Fairness](assets/dashboard_escalabilidad_fairness_oaksgenv2.png)
 
