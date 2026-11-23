@@ -93,7 +93,7 @@ Para soportar la expansión de **Oaks Motors Industries** a 4 líneas de ensambl
 
 ### 🏗️ Arquitectura Actual (`v2.1`) vs. Propuesta (`v3.0`)
 
-![Diagrama Arquitectura Actual vs Propuesta](assets/arquitectura_actual_vs_propuesta.png)
+![Diagrama Arquitectura Actual vs Propuesta](assets/arquitectura_actual_vs_propuesta.jpg)
 
 ### 📊 Benchmark de Desempeño, FinOps y Auditoría *Fairness*
 
@@ -109,15 +109,7 @@ python escalabilidad_fairness_oaksgen.py
 
 ---
 
-## 📈 Fase III (Actividad 9): Rediseño Escalable (`v3.0`), FinOps y Auditoría *Responsible AI* V2
-
-Para soportar la expansión de **Oaks Motors Industries** a 4 líneas de ensamble manteniendo los SLAs ($\text{Recall} \ge 0.95$ y $\text{Latencia } p95 \le 50\text{ ms}$), se evolucionó de una arquitectura monolítica fija (`v2.1`) a una topología de microservicios elásticos (`v3.0`) con balanceo de carga, caché en memoria y gobernanza automatizada.
-
-### 🏗️ Arquitectura Actual (`v2.1`) vs. Propuesta (`v3.0`)
-
-![Diagrama Arquitectura Actual vs Propuesta](assets/arquitectura_actual_vs_propuesta.png)
-
-### 📊 Benchmark de Desempeño, FinOps y Auditoría *Fairness*
+### Corrigiendo datos desviados.
 
 ![Dashboard Escalabilidad FinOps y Fairness](assets/dashboard_escalabilidad_fairness_oaksgenv2.png)
 
@@ -131,4 +123,4 @@ Para soportar la expansión de **Oaks Motors Industries** a 4 líneas de ensambl
 ### ⚙️ Ejecución del Benchmark de Escalabilidad y Fairness
 
 ```bash
-python escalabilidad_fairness_oaksgen.py
+python escalabilidad_fairness_oaksgenv2.py
