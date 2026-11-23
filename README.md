@@ -119,7 +119,7 @@ Para soportar la expansión de **Oaks Motors Industries** a 4 líneas de ensambl
 
 ### 📊 Benchmark de Desempeño, FinOps y Auditoría *Fairness*
 
-![Dashboard Escalabilidad FinOps y Fairness](assets/dashboard_escalabilidad_fairness_oaksgen.png)
+![Dashboard Escalabilidad FinOps y Fairness](assets/dashboard_escalabilidad_fairness_oaksgenv2.png)
 
 * **Desempeño y Escalamiento:** El *throughput* máximo sube de $45$ a $220\text{ req/s}$ y la latencia $p95$ en pico baja de $148.5\text{ ms}$ a $18.4\text{ ms}$ (con inferencia pura de XGBoost medida en **$0.7\text{ ms}$**).
 * **Optimización FinOps:** Reducción del **40.4%** en costo mensual de infraestructura (de $\$318.00$ a $\$189.50\text{ USD/mes}$) mediante *scale-out* elástico y nodos *Spot* en picos.
