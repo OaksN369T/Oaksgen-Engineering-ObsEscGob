@@ -107,4 +107,28 @@ Para soportar la expansión de **Oaks Motors Industries** a 4 líneas de ensambl
 ```bash
 python escalabilidad_fairness_oaksgen.py
 
+---
 
+## 📈 Fase III (Actividad 9): Rediseño Escalable (`v3.0`), FinOps y Auditoría *Responsible AI* V2
+
+Para soportar la expansión de **Oaks Motors Industries** a 4 líneas de ensamble manteniendo los SLAs ($\text{Recall} \ge 0.95$ y $\text{Latencia } p95 \le 50\text{ ms}$), se evolucionó de una arquitectura monolítica fija (`v2.1`) a una topología de microservicios elásticos (`v3.0`) con balanceo de carga, caché en memoria y gobernanza automatizada.
+
+### 🏗️ Arquitectura Actual (`v2.1`) vs. Propuesta (`v3.0`)
+
+![Diagrama Arquitectura Actual vs Propuesta](assets/arquitectura_actual_vs_propuesta.png)
+
+### 📊 Benchmark de Desempeño, FinOps y Auditoría *Fairness*
+
+![Dashboard Escalabilidad FinOps y Fairness](assets/dashboard_escalabilidad_fairness_oaksgen.png)
+
+* **Desempeño y Escalamiento:** El *throughput* máximo sube de $45$ a $220\text{ req/s}$ y la latencia $p95$ en pico baja de $148.5\text{ ms}$ a $18.4\text{ ms}$ (con inferencia pura de XGBoost medida en **$0.7\text{ ms}$**).
+* **Optimización FinOps:** Reducción del **40.4%** en costo mensual de infraestructura (de $\$318.00$ a $\$189.50\text{ USD/mes}$) mediante *scale-out* elástico y nodos *Spot* en picos.
+* **Auditoría de Sesgos (*Fairness* — Test Set $n=420$, $140$ por turno):** Se detectó una caída térmica en el **Turno Nocturno** ($\text{Recall} = 0.6316$, $\Delta\text{Recall} = -0.3414$) y se mitigó incorporando `temp_ambiente` + calibración adaptativa por turno, alcanzando **$\text{Recall} = 0.9737$** ($\Delta\text{Recall} = +0.0007$) y aprobando los tres turnos dentro de la tolerancia ($\le 0.02$):
+  * **Turno Matutino:** $\text{Recall} = 0.9600$ ($\Delta\text{Recall} = -0.0130$) — *Aprobado*
+  * **Turno Vespertino (Ref.):** $\text{Recall} = 0.9730$ ($\Delta\text{Recall} = 0.0000$) — *Aprobado*
+  * **Turno Nocturno:** $\text{Recall} = 0.9737$ ($\Delta\text{Recall} = +0.0007$) — *Aprobado*
+
+### ⚙️ Ejecución del Benchmark de Escalabilidad y Fairness
+
+```bash
+python escalabilidad_fairness_oaksgen.py
