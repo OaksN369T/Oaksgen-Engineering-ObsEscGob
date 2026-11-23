@@ -104,7 +104,7 @@ Para soportar la expansión de **Oaks Motors Industries** a 4 líneas de ensambl
 
 ### ⚙️ Ejecución del Benchmark de Escalabilidad y Fairness
 
-```bash
+bash
 python escalabilidad_fairness_oaksgen.py
 
 ---
@@ -122,5 +122,5 @@ python escalabilidad_fairness_oaksgen.py
 
 ### ⚙️ Ejecución del Benchmark de Escalabilidad y Fairness
 
-```bash
+bash
 python escalabilidad_fairness_oaksgenv2.py
