@@ -1,4 +1,4 @@
-# oaksgen-engineering-observabilidad
+# oaksgen-engineering-observabilidad-escalabilidad y gobernanza
 
 Estructura del Repositorio (oaksgen-engineering-observabilidad)
 
@@ -86,10 +86,8 @@ Sistema de monitorización proactiva, detección estadística de *Data Drift* y 
 
    Autor: José Manuel Robles Espinosa — Oaks Motors Industries
    ---
-## 📈 Fase III (Actividad 9): Rediseño Escalable, FinOps y Auditoría Fairness
----
 
-## 📈 Fase III (Actividad 9): Rediseño Escalable (`v3.0`), FinOps y Auditoría *Responsible AI*
+## 📈 Fase III (Actividad 9): Rediseño Escalable (`v3.0`), FinOps y Auditoría Fairness *Responsible AI*
 
 Para soportar la expansión de **Oaks Motors Industries** a 4 líneas de ensamble manteniendo los SLAs ($\text{Recall} \ge 0.95$ y $\text{Latencia } p95 \le 50\text{ ms}$), se evolucionó de una arquitectura monolítica fija (`v2.1`) a una topología de microservicios elásticos (`v3.0`) con balanceo de carga, caché en memoria y gobernanza automatizada.
 
