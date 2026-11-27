@@ -1,6 +1,6 @@
 # Oaksgen-Engineering_v3.0: Monitoreo, Auditoria, Optimización y Gobernanza, Pipeline MLOps/GitOps y Portafoilo Técnico Estratégico.
 
-Estructura del Repositorio (oaksgen-engineering-observabilidad)
+Estructura del Repositorio (Oaksgen-engineering_v3.0)
 
 oaksgen-engineering-observabilidad/
 ├── README.md                              # Documentación principal + Runbooks operativos (RB-01 y RB-02)
@@ -16,7 +16,7 @@ Este es el archivo estrella que GitHub. Ya incluye las insignias de versión, la
 Archivo README.md (Con los Runbooks Operativos incluidos)
 Este es el archivo estrella que GitHub muestra apenas entras al repo. Ya incluye las insignias de versión, la tabla de SLOs/Error Budgets, la incrustación automática de tu dashboard y los Runbooks RB-01 y RB-02 paso a paso.
 
-# 🏭 OaksGen-Engineering v2.1 — Observabilidad MLOps y Gobernanza Operativa
+# 🏭 OaksGen-Engineering v3.0 — Observabilidad MLOps y Gobernanza Operativa
 
 ![Python](https://img.shields.io/badge/Python-3.11%2B-blue?logo=python)
 ![MLflow](https://img.shields.io/badge/MLflow-3.18%20Tracking-0194E2?logo=mlflow)
