@@ -35,3 +35,10 @@ jobs:
           path: |
             metricas_oficiales_fase3.json
             dashboard_fase3_pipeline_oaksgen.png
+            
+      - name: 6. Construir y Verificar Imagen Docker (Entorno Reproducible)
+        run: |
+          docker build -t oaksgen-engineering:v3.0 .
+          docker images oaksgen-engineering:v3.0
+
+        
