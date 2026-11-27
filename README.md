@@ -123,3 +123,75 @@ python escalabilidad_fairness_oaksgen.py
 
 bash
 python escalabilidad_fairness_oaksgenv2.py
+
+# 🚀 OaksGen-Engineering v3.0 — Pipeline MLOps/GitOps, Observabilidad y Gobernanza Industrial
+
+* **Organización Caso:** Oaks Motors Industries (4 Líneas de Ensamble: `Linea_1` a `Linea_4`)
+* **Autor:** José Manuel Robles Espinosa | Maestría en Inteligencia Artificial
+* **Estado CI/CD:** ✅ *Passed* (`OaksGen-Engineering v3.0 MLOps & GitOps CI/CD #2` — Commit `ece1498`)
+* **Sello de Datos Oficial:** `metricas_oficiales_fase3.json` (`dataset_hash: 7aeb8451be57`)
+
+---
+
+## 🔄 Convergencia del Ciclo de Vida (Fase I → Fase II → Fase III)
+
+1. **Fase I (Viabilidad y Negocio):** Responde a los *stakeholders* clave de **Oaks Motors Industries** —Gerencia de Operaciones/Mantenimiento, Supervisores de Turno y Dirección Financiera/TI— mitigando paros no planificados en prensas hidráulicas y puntos ciegos operativos nocturnos.
+2. **Fase II (Solución Desplegable):** Evoluciona el entorno reproducible en **Docker**, la API REST en **FastAPI** y las pruebas funcionales hacia una arquitectura desacoplada lista para producción.
+3. **Fase III (Operación, MLOps y Evidencia):** Automatiza integración continua, pruebas de calidad (`pytest`), calibración independiente (`60/20/20`), versionado en **MLflow**, optimización **FinOps** y auditoría **Responsible AI**.
+
+---
+
+## ⚙️ Arquitectura del Pipeline Automatizado (MLOps & GitOps)
+
+Cada `push` a `main` dispara `.github/workflows/mlops_pipeline.yml` ejecutando cinco etapas verificables:
+1. **Ingesta Determinista:** $6,000$ registros de telemetría sellados por SHA-256 (`7aeb8451be57`).
+2. **Partición Independiente (*Zero Data Leakage*):** *Train* ($3,600$), *Validation* ($1,200$ — calibración exclusiva de umbrales $\tau$) y *Test* ($1,200$ — auditoría ciega).
+3. **Quality Gates (`pytest`):** Bloquea el despliegue si hay valores nulos, si $\text{Recall}_{\text{global}} < 0.95$ o si $\vert{}\Delta\text{Recall}\vert{} > 0.02$.
+4. **Benchmark HTTP FastAPI (`POST /predict`):** Prueba automatizada de estrés con $300$ solicitudes JSON verificando latencia $p95 \le 50.0\text{ ms}$.
+5. **Versionado y Release CD:** Registro en **MLflow** y empaquetado del artefacto `oaksgen-v3-production-release`.
+
+---
+
+## 📊 Resultados Oficiales Verificados (`metricas_oficiales_fase3.json`)
+
+| Dimensión Evaluada | Métrica / Indicador | Resultado Medido (`v3.0`) | SLA / Objetivo | Estatus |
+| :--- | :--- | :---: | :---: | :---: |
+| **Desempeño Global (*Test* $n=1,200$)** | Recall / Precision / F1-Score | **$0.9723$** / $0.8954$ / $0.9323$ | $\text{Recall} \ge 0.9500$ | ✅ Cumple |
+| **Paridad Turno Matutino ($n=400$)** | Recall ($\tau = 0.38$) / $\Delta\text{Recall}$ | **$0.9675$** / $-0.0049$ | $\vert{}\Delta\text{Recall}\vert{} \le 0.02$ | ✅ Cumple |
+| **Paridad Turno Vespertino ($n=400$)** | Recall ($\tau = 0.35$) / $\Delta\text{Recall}$ | **$0.9667$** / $-0.0057$ | $\vert{}\Delta\text{Recall}\vert{} \le 0.02$ | ✅ Cumple |
+| **Paridad Turno Nocturno ($n=400$)** | Recall ($\tau = 0.18$) / $\Delta\text{Recall}$ | **$0.9831$** / $+0.0107$ | $\vert{}\Delta\text{Recall}\vert{} \le 0.02$ | ✅ Cumple |
+| **Benchmark API FastAPI ($300$ req)** | Latencia $p50$ / $p95$ / Throughput | **$7.53\text{ ms}$** / **$28.37\text{ ms}$** / **$86.2\text{ req/s}$** | $p95 \le 50.0\text{ ms}$ | ✅ Cumple |
+| **Eficiencia FinOps (AWS Cloud)** | Costo Mensual vs. `v2.1` ($\$318.00$) | **$\$189.50\text{ USD/mes}$** ($-\$128.50$) | Ahorro $\ge 30\%$ | ✅ **$40.4\%$** |
+
+### ⚖️ Trade-offs de Ingeniería y Aprendizajes Clave
+* **Sensibilidad (*Recall*) vs. Falsas Alarmas (*FPR*):** Se calibró $\tau = 0.18$ en el turno nocturno para alcanzar **$0.9831$** de *Recall*, aceptando un *FPR* del **$7.45\%$** (vs. $2.17\%$ matutino) dado que una inspección preventiva tiene un costo marginal frente al paro catastrófico de una línea de ensamble.
+* **Latencia vs. Complejidad Arquitectónica:** Se desacopló el motor tabular **XGBoost** ($p95 = 28.37\text{ ms}$) del módulo documental **RAG** respaldado con caché **Redis** para proteger el tiempo real de los PLCs.
+
+---
+
+## 🖼️ Evidencias Visuales y Trazabilidad de Decisiones
+
+### 1. Ejecución CI/CD en GitHub Actions (`Commit ece1498`)
+![GitHub Actions CI/CD](assets/github_actions_fase3.png)
+* **Qué demuestra:** Ejecución automatizada e ininterrumpida del workflow `OaksGen-Engineering v3.0 MLOps & GitOps CI/CD #2` en la nube aprobando `pytest`, *Quality Gates* de *Fairness* y el empaquetado del *release* en `1m 0s`.
+* **Decisión técnica que respalda:** Elimina despliegues manuales sin validación estadística en `main`, asegurando que solo versiones auditadas lleguen a producción.
+
+### 2. Dashboard Integral MLOps, Fairness y Estrés API (`dashboard_fase3_pipeline_oaksgen.png`)
+![Dashboard Fase 3](assets/dashboard_fase3_pipeline_oaksgen.png)
+* **Qué demuestra:** Desempeño del modelo en *Test Set* ($n=1,200$), paridad operativa en los tres turnos (con $0.9831$ en nocturno) y distribución de latencias HTTP en $300$ peticiones reales a FastAPI ($86.2\text{ req/s}$ por nodo).
+* **Decisión técnica que respalda:** Sustenta el autoescalamiento horizontal de 1 a 4 réplicas `c6i.large` bajo *Application Load Balancer*, logrando un ahorro FinOps del **$40.4\%$** ($\$128.50\text{ USD/mes}$).
+
+---
+
+## 🛠️ Estructura del Repositorio y Ejecución Local
+
+```text
+├── .github/workflows/mlops_pipeline.yml   # Pipeline GitOps CI/CD en GitHub Actions
+├── pipeline_fase3_oaksgen.py              # Entrenamiento, calibración Val/Test, benchmark API y MLflow
+├── test_pipeline.py                       # Pruebas automatizadas pytest (Data, SLA, Fairness y API)
+├── escalabilidad_fairness_oaksgen.py      # Auditoría comparativa v2.1 vs v3.0 (Actividad 9)
+└── assets/                                # Diagramas de arquitectura y dashboards de evidencia
+
+# Instalación y ejecución de pruebas automatizadas localmente
+pip install fastapi httpx pytest mlflow xgboost scikit-learn pandas numpy matplotlib
+pytest -v test_pipeline.py
